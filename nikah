@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071A14">
+<title>Амир & Галия • Приглашение на никах</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0C2820;--deep:#071A14;--ivory:#F6F1E4;--paper:#FBF8F0;--gold:#C8A96A;--gold2:#E6D3A3;--ink:#12261F;--muted:#5B6C62;--sage:#9DB5A3;--line:rgba(200,169,106,.5)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;background:var(--deep)}
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:radial-gradient(80% 50% at 50% 0,#14382D,var(--deep) 70%);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+.hidden{display:none!important}.flex{display:flex}
+.wrap{max-width:480px;margin:0 auto;background:var(--ivory);position:relative;overflow:hidden;box-shadow:0 0 90px rgba(0,0,0,.55)}
+.sr{position:absolute;opacity:0;pointer-events:none}
+
+/* HERO */
+.hero{position:relative;height:770px;color:var(--ivory);overflow:hidden;background:linear-gradient(180deg,#0A231B 0,#0F3328 55%,#18453B 100%)}
+.hero>svg{position:absolute}
+.glow{position:absolute;left:0;right:0;bottom:0;height:340px;background:radial-gradient(60% 90% at 50% 100%,rgba(200,169,106,.4),transparent 70%)}
+.stars{inset:0;width:100%;height:100%}
+.portal{left:16px;top:22px;width:calc(100% - 32px);height:calc(100% - 22px)}
+.portal path{fill:none;vector-effect:non-scaling-stroke}
+.moon{right:26px;top:34px;filter:drop-shadow(0 0 14px rgba(230,211,163,.55))}
+.lantern{left:50%;top:28px;margin-left:-22px}
+.sky{left:0;bottom:44px;width:100%;height:auto}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45px;background:#071A14}
+.hero-in{position:relative;z-index:2;text-align:center;padding:152px 44px 0}
+.hero-in>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.hero-in>:nth-child(2){animation-delay:.12s}.hero-in>:nth-child(3){animation-delay:.24s}.hero-in>:nth-child(4){animation-delay:.36s}.hero-in>:nth-child(5){animation-delay:.48s}.hero-in>:nth-child(6){animation-delay:.58s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.bism{font-family:'Amiri',serif;font-size:24px;line-height:1.4;color:var(--gold2);margin-bottom:12px}
+.inv{font-size:14px;letter-spacing:.06em;color:var(--sage);margin-bottom:14px}
+.names{font:400 68px/.98 'Forum',serif;color:var(--ivory)}
+.names span{display:block}
+.names i{display:block;font-style:normal;font-size:34px;line-height:1.15;color:var(--gold)}
+.rule{display:flex;align-items:center;gap:12px;width:150px;margin:20px auto 16px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--gold)}
+.rule b{width:7px;height:7px;transform:rotate(45deg);background:var(--gold)}
+.date{font:400 28px/1.1 'Forum',serif;color:var(--gold2)}
+.city{font-size:13px;letter-spacing:.08em;color:var(--sage);margin-top:6px}
+
+/* ТАЙМЕР */
+.count{position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:-58px 22px 0}
+.count div{background:var(--paper);border:1px solid var(--line);border-radius:44px 44px 10px 10px;padding:18px 4px 12px;text-align:center;box-shadow:0 14px 28px rgba(7,26,20,.28)}
+.count b{display:block;font:400 32px/1 'Forum',serif}
+.count span{display:block;font-size:11px;color:var(--muted);margin-top:6px}
+
+/* СЕКЦИИ */
+.sec{padding:64px 28px 0;text-align:center}
+.orn{display:block;margin:0 auto 14px;stroke:var(--gold);stroke-width:1.4;fill:none}
+.sec h2{font:400 36px/1.1 'Forum',serif}
+.sub{font-size:13.5px;line-height:1.7;color:var(--muted);margin:10px auto 0;max-width:36ch}
+.lead{font-size:15.5px;line-height:1.85;color:#33463C;max-width:36ch;margin:0 auto}
+.prog{margin-top:36px;text-align:left;padding:0 6px}
+.row{display:grid;grid-template-columns:64px 1fr}
+.row .t{font:400 26px/1 'Forum',serif;padding-top:2px}
+.row .d{border-left:1px solid var(--gold);padding:0 0 34px 24px;position:relative}
+.row .d::before{content:"";position:absolute;left:-5px;top:5px;width:9px;height:9px;transform:rotate(45deg);background:var(--gold)}
+.row:nth-child(even) .d::before{background:var(--ivory);border:1px solid var(--gold)}
+.row:last-child .d{padding-bottom:0;border-color:transparent}
+.d h3{font:600 16px/1.3 'Manrope',sans-serif}
+.d p{font-size:13px;line-height:1.6;color:var(--muted);margin-top:4px}
+.dark{background:linear-gradient(180deg,#0C2820,#071A14);color:var(--ivory);margin-top:64px;padding-bottom:64px}
+.dark .sub,.dark .addr{color:var(--sage)}
+.place{font:400 26px/1.25 'Forum',serif;margin:28px 0 6px}
+.addr{font-size:14px;margin-bottom:28px}
+.map{height:330px;margin:0 12px;border-radius:165px 165px 14px 14px;overflow:hidden;border:1px solid var(--gold);box-shadow:0 0 0 6px #0C2820,0 0 0 7px rgba(200,169,106,.55)}
+.map iframe{width:100%;height:100%;border:0;filter:sepia(10%) saturate(90%)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;border:0;border-radius:999px;font:600 15px 'Manrope',sans-serif;text-decoration:none;cursor:pointer;transition:transform .2s,opacity .2s}
+.btn:active{transform:scale(.99)}
+.btn:focus-visible,.inp:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btn.gold{background:var(--gold);color:var(--deep);margin-top:34px}
+.btn.green{background:linear-gradient(180deg,#134235,#0C2820);color:var(--gold2);box-shadow:0 12px 24px rgba(12,40,32,.3)}
+.btn:disabled{opacity:.7;cursor:default}
+.sw{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:32px}
+.sw i{display:block;height:92px;border-radius:40px 40px 8px 8px;border:1px solid var(--line);box-shadow:inset 0 -18px 26px rgba(0,0,0,.08)}
+.sw span{display:block;font-size:11px;line-height:1.25;color:var(--muted);margin-top:8px}
+
+/* АНКЕТА */
+.form{margin-top:32px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px 20px;display:grid;gap:20px}
+.form label.l,.form .l{display:block;font:600 13.5px 'Manrope',sans-serif;margin-bottom:8px}
+.req{color:#A8884F}
+.inp{width:100%;background:#fff;border:1px solid #DCD0B3;border-radius:12px;padding:14px 16px;font:400 16px 'Manrope',sans-serif;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.inp::placeholder{color:#9AA39E;font-weight:300}
+.inp:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,169,106,.25)}
+select.inp{appearance:none;-webkit-appearance:none;padding-right:42px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%23A8884F' stroke-width='1.8'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+textarea.inp{resize:none}
+.opt{display:block;position:relative;cursor:pointer;margin-bottom:10px}
+.opt:last-child{margin-bottom:0}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt div{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border:1px solid #DCD0B3;border-radius:14px;background:#fff;transition:background .2s,color .2s}
+.opt b{display:block;font-weight:600;font-size:15px}
+.opt small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.opt em{flex:none;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--gold)}
+.opt input:checked+div{background:var(--night);color:var(--ivory);border-color:var(--night)}
+.opt input:checked+div small{color:var(--sage)}
+.opt input:checked+div em{background:var(--gold);box-shadow:inset 0 0 0 3px var(--night)}
+.opt input:focus-visible+div{outline:2px solid var(--gold);outline-offset:2px}
+.spinner{width:18px;height:18px;border:2px solid rgba(230,211,163,.3);border-top-color:var(--gold2);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ФУТЕР */
+.foot{background:var(--deep);color:var(--ivory);text-align:center;padding:60px 28px 0;margin-top:64px}
+.foot h2{font:400 32px/1.15 'Forum',serif;max-width:20ch;margin:0 auto}
+.foot p{font-size:13px;letter-spacing:.08em;color:var(--gold);margin-top:12px}
+.foot svg.s{display:block;width:calc(100% + 56px);margin:36px -28px 0;height:auto}
+
+/* МОДАЛКА */
+.modal{position:fixed;inset:0;z-index:50;align-items:center;justify-content:center;padding:20px;background:rgba(7,26,20,.78);backdrop-filter:blur(4px)}
+.mbox{width:100%;max-width:360px;background:var(--paper);border:1px solid var(--gold);border-radius:150px 150px 22px 22px;padding:56px 28px 28px;text-align:center;box-shadow:0 30px 60px rgba(0,0,0,.4);animation:rise .4s both}
+.mk{font-size:13px;color:#A8884F;margin:10px 0 6px}
+.mbox h3{font:400 32px/1.1 'Forum',serif;margin-bottom:12px}
+#modalText{font-size:14px;line-height:1.7;color:var(--muted);margin-bottom:24px}
+@media(prefers-reduced-motion:reduce){.hero-in>*,.mbox{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EBD9AA"/><stop offset="1" stop-color="#A8884F"/></linearGradient>
+<radialGradient id="gw"><stop offset="0" stop-color="#FFF3C9"/><stop offset="1" stop-color="#F0C96A" stop-opacity=".4"/></radialGradient>
+<g id="arc"><path d="M3 27V14C3 8 8 4 12 1c4 3 9 7 9 13v13"/><circle cx="12" cy="17" r="1.6" fill="#C8A96A" stroke="none"/></g>
+<g id="ln"><path d="M30 0V30" stroke="#B89A5F" stroke-width="1.4"/><circle cx="30" cy="30" r="3" fill="none" stroke="url(#gl)" stroke-width="1.6"/><path d="M30 33L18 46H42Z" fill="url(#gl)"/><path d="M16 46H44L40 52H20Z" fill="url(#gl)"/><path d="M20 52H40L46 100H14Z" fill="url(#gw)" stroke="url(#gl)" stroke-width="2.2"/><path d="M30 52V100M24 52L22 100M36 52L38 100" stroke="url(#gl)" stroke-width="1"/><path d="M14 100H46L42 108H18Z" fill="url(#gl)"/><path d="M30 108V122" stroke="#B89A5F" stroke-width="1.4"/><circle cx="30" cy="126" r="3.4" fill="url(#gl)"/></g>
+<g id="sky"><path d="M170 118V82Q170 40 240 28Q310 40 310 82V118Z"/><rect x="239" y="8" width="2" height="22"/><path d="M244 0a7 7 0 1 0 0 13a5.5 5.5 0 1 1 0-13z"/><path d="M96 118V96Q96 72 130 66Q164 72 164 96V118Z"/><path d="M316 118V96Q316 72 350 66Q384 72 384 96V118Z"/><path d="M0 118V104Q0 92 24 90Q40 92 40 104V118Z"/><path d="M440 118V104Q440 92 462 90Q480 92 480 104V118Z"/><rect x="56" y="50" width="12" height="68"/><path d="M54 50L62 24L70 50Z"/><rect x="52" y="60" width="20" height="3"/><rect x="412" y="60" width="12" height="58"/><path d="M410 60L418 34L426 60Z"/><rect x="408" y="70" width="20" height="3"/><rect x="0" y="116" width="480" height="14"/>
+<path d="M232 118V98Q232 90 240 88Q248 90 248 98V118Z" fill="#E6D3A3" opacity=".9"/><path d="M196 118V104Q196 98 202 96Q208 98 208 104V118Z" fill="#E6D3A3" opacity=".55"/><path d="M272 118V104Q272 98 278 96Q284 98 284 104V118Z" fill="#E6D3A3" opacity=".55"/></g>
+</defs></svg>
+
+<div id="rsvpModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="mbox">
+    <svg class="orn" width="30" height="34" viewBox="0 0 24 28"><use href="#arc"/></svg>
+    <p class="mk" id="modalKicker">Анкета учтена</p>
+    <h3 id="modalTitle">Благодарим вас!</h3>
+    <p id="modalText"></p>
+    <button type="button" class="btn green" onclick="closeModal()">Закрыть</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <svg class="stars" viewBox="0 0 480 770" preserveAspectRatio="xMidYMin slice" aria-hidden="true" fill="#E6D3A3"><circle cx="60" cy="60" r="1.4" opacity=".8"/><circle cx="120" cy="120" r="1" opacity=".6"/><circle cx="90" cy="200" r="1.2" opacity=".7"/><circle cx="30" cy="300" r="1" opacity=".5"/><circle cx="150" cy="40" r="1" opacity=".7"/><circle cx="410" cy="110" r="1.2" opacity=".7"/><circle cx="445" cy="190" r="1" opacity=".6"/><circle cx="380" cy="250" r="1.4" opacity=".7"/><circle cx="445" cy="330" r="1" opacity=".5"/><circle cx="55" cy="420" r="1" opacity=".5"/><circle cx="25" cy="500" r="1.2" opacity=".6"/><circle cx="455" cy="450" r="1" opacity=".5"/><circle cx="425" cy="540" r="1.2" opacity=".6"/><circle cx="330" cy="60" r="1" opacity=".6"/><circle cx="250" cy="22" r="1.2" opacity=".7"/></svg>
+    <div class="glow"></div>
+    <svg class="portal" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true"><path d="M10 600V240C10 130 110 70 200 6C290 70 390 130 390 240V600" stroke="#C8A96A" stroke-width="1.6" fill="rgba(255,255,255,.03)"/><path d="M22 600V244C22 140 118 82 200 24C282 82 378 140 378 244V600" stroke="#C8A96A" stroke-width=".8" opacity=".55"/></svg>
+    <svg class="moon" width="46" height="46" viewBox="0 0 40 40" aria-hidden="true"><path d="M26 4a17 17 0 1 0 10 28A14 14 0 0 1 26 4z" fill="#E6D3A3"/></svg>
+    <svg class="lantern" width="44" height="103" viewBox="0 0 60 140" aria-hidden="true"><use href="#ln"/></svg>
+    <svg class="sky" viewBox="0 0 480 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true" fill="#071A14"><use href="#sky"/></svg>
+
+    <div class="hero-in">
+      <p class="bism" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="inv">Приглашение на никах</p>
+      <h1 class="names"><span>Амир</span><i>&amp;</i><span>Галия</span></h1>
+      <div class="rule"><b></b></div>
+      <p class="date">15 августа 2027</p>
+      <p class="city">Казань</p>
+    </div>
+  </header>
+
+  <div class="count" id="countdown" aria-label="Время до никаха">
+    <div><b id="days">00</b><span>дней</span></div>
+    <div><b id="hours">00</b><span>часов</span></div>
+    <div><b id="minutes">00</b><span>минут</span></div>
+    <div><b id="seconds">00</b><span>секунд</span></div>
+  </div>
+
+  <section class="sec">
+    <svg class="orn" width="26" height="30" viewBox="0 0 24 28" aria-hidden="true"><use href="#arc"/></svg>
+    <p class="lead">С радостью приглашаем вас разделить с нами особенный день — день нашего никаха. Будем счастливы видеть вас рядом и разделить эту благословенную радость.</p>
+  </section>
+
+  <section class="sec">
+    <svg class="orn" width="26" height="30" viewBox="0 0 24 28" aria-hidden="true"><use href="#arc"/></svg>
+    <h2>Программа дня</h2>
+    <p class="sub">15 августа, Казань</p>
+    <div class="prog">
+      <div class="row"><div class="t">12:30</div><div class="d"><h3>Сбор гостей у мечети</h3><p>Приветствие, встреча с родными и близкими</p></div></div>
+      <div class="row"><div class="t">13:00</div><div class="d"><h3>Обряд Никах</h3><p>Священный обряд бракосочетания в мечети</p></div></div>
+      <div class="row"><div class="t">14:30</div><div class="d"><h3>Памятная фотосессия</h3><p>Совместные снимки с близкими</p></div></div>
+      <div class="row"><div class="t">15:30</div><div class="d"><h3>Праздничный меджлис</h3><p>Торжественный ужин, поздравления и тёплые слова</p></div></div>
+    </div>
+  </section>
+
+  <section class="sec dark">
+    <svg class="orn" width="26" height="30" viewBox="0 0 24 28" aria-hidden="true"><use href="#arc"/></svg>
+    <h2>Как нас найти</h2>
+    <h3 class="place">Мечеть и банкетный зал ресторана «Караван»</h3>
+    <p class="addr">Казань, ул. Спартаковская, 6</p>
+    <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.129323%2C55.776100&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA4ODE1MxI60KDQvtGB0YHQuNGPLCDQmtCw0LfQsNC90YwsINCh0L_QsNGA0YLQsNC60L7QstGB0LrQsNGPINGD0LvQuNGG0CwLIDI2MyIsCDo7FkIVS6FfQg%2C%2C&z=16" allowfullscreen="true" loading="lazy" title="Карта локации"></iframe></div>
+    <a class="btn gold" href="https://yandex.ru/maps/?text=Казань,+улица+Спартаковская,+6" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Открыть в Яндекс Картах
+    </a>
+  </section>
+
+  <section class="sec" style="padding-top:72px">
+    <svg class="orn" width="26" height="30" viewBox="0 0 24 28" aria-hidden="true"><use href="#arc"/></svg>
+    <h2>Дресс-код</h2>
+    <p class="sub">Мы будем признательны, если вы поддержите цветовую гамму праздника и выберете скромные, закрытые наряды для посещения мечети. Девушкам рекомендуем взять лёгкий платок.</p>
+    <div class="sw">
+      <div><i style="background:#1F3D2B"></i><span>Изумрудный</span></div>
+      <div><i style="background:#E6D7C3"></i><span>Шампань</span></div>
+      <div><i style="background:#C8A96A"></i><span>Золотистый</span></div>
+      <div><i style="background:#9CAF9E"></i><span>Шалфей</span></div>
+      <div><i style="background:#F5F2EB"></i><span>Молочный</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <svg class="orn" width="26" height="30" viewBox="0 0 24 28" aria-hidden="true"><use href="#arc"/></svg>
+    <h2>Подтвердите присутствие</h2>
+    <p class="sub">Пожалуйста, ответьте заранее — нам важно подготовиться к встрече гостей.</p>
+
+    <form id="weddingForm" class="form">
+      <div>
+        <label class="l" for="guestNameInput">Ваше имя и фамилия <span class="req">*</span></label>
+        <input id="guestNameInput" class="inp" type="text" name="Имя и Фамилия" placeholder="Иван Иванов" required autocomplete="name">
+      </div>
+
+      <div>
+        <span class="l">Присутствие <span class="req">*</span></span>
+        <label class="opt"><input type="radio" name="Присутствие" value="С удовольствием приду" required checked><div><span><b>С удовольствием приду</b><small>Разделю с вами этот особенный день</small></span><em></em></div></label>
+        <label class="opt"><input type="radio" name="Присутствие" value="К сожалению, не смогу"><div><span><b>К сожалению, не смогу</b><small>Мысленно буду рядом с вами</small></span><em></em></div></label>
+      </div>
+
+      <div>
+        <label class="l" for="formatSelect">Формат участия <span class="req">*</span></label>
+        <select id="formatSelect" class="inp" name="Формат участия" onchange="toggleCompanion(this)" required>
+          <option value="" disabled selected>Выберите вариант</option>
+          <option value="Буду один / одна">Буду один / одна</option>
+          <option value="С парой (+1)">С парой (+1)</option>
+          <option value="С детьми / семьей">С детьми / семьей</option>
+        </select>
+      </div>
+
+      <div id="companion-count-field" class="hidden">
+        <label class="l" for="companionCountInput">Количество человек (включая вас)</label>
+        <input id="companionCountInput" class="inp" type="number" name="Количество человек" min="1" max="10" value="1" placeholder="Например: 3">
+      </div>
+
+      <div>
+        <label class="l" for="allergyInput">Аллергии / Диета</label>
+        <input id="allergyInput" class="inp" type="text" name="Аллергии / Диета" placeholder="Аллергия на орехи, лактозу и т.д.">
+      </div>
+
+      <div>
+        <label class="l" for="wishesInput">Пожелания</label>
+        <textarea id="wishesInput" class="inp" name="Пожелания" rows="3" placeholder="Ваши тёплые пожелания или вопросы"></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn green">
+        <span id="submitBtnText">Отправить ответ</span>
+        <span id="submitSpinner" class="spinner hidden"></span>
+      </button>
+    </form>
+  </section>
+
+  <footer class="foot">
+    <svg class="orn" width="26" height="30" viewBox="0 0 24 28" aria-hidden="true"><use href="#arc"/></svg>
+    <h2>С любовью и теплом ждём вас</h2>
+    <p>Амир &amp; Галия — 15.08.2027</p>
+    <svg class="s" viewBox="0 0 480 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true" fill="#0F3328"><use href="#sky"/></svg>
+  </footer>
+</div>
+
+<script>
+  // 1. ТАЙМЕР ОБРАТНОГО ОТСЧЕТА ДО 2027-08-15T13:00:00
+  const weddingDate = new Date('2027-08-15T13:00:00').getTime();
+  const pad = n => String(n).padStart(2, '0');
+
+  function updateCountdown() {
+    const diff = Math.max(0, weddingDate - Date.now());
+    document.getElementById('days').textContent = pad(Math.floor(diff / 86400000));
+    document.getElementById('hours').textContent = pad(Math.floor((diff % 86400000) / 3600000));
+    document.getElementById('minutes').textContent = pad(Math.floor((diff % 3600000) / 60000));
+    document.getElementById('seconds').textContent = pad(Math.floor((diff % 60000) / 1000));
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // 2. АНИМАЦИЯ ПЛАВНОГО ПОЯВЛЕНИЯ ПРИ ПРОКРУТКЕ
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(section => {
+    revealObserver.observe(section);
+  });
+
+  // 3. ДИНАМИЧЕСКОЕ ПОЛЕ "КОЛИЧЕСТВО ЧЕЛОВЕК"
+  function toggleCompanion(select) {
+    const field = document.getElementById('companion-count-field');
+    const input = document.getElementById('companionCountInput');
+    if (select.value === 'С детьми / семьей') {
+      field.classList.remove('hidden');
+      input.value = '';
+    } else {
+      field.classList.add('hidden');
+      input.value = select.value === 'С парой (+1)' ? '2' : '1';
+    }
+  }
+
+  // 4. ОТПРАВКА АНКЕТЫ В GOOGLE SHEETS
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxQrS9DdIWqdok3VDgtHFEqCcgWKRoUG8Tp_zUfL-jwfDhBfPUKFeRAZuJivs55-P8L0w/exec';
+  const form = document.getElementById('weddingForm');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('submitBtnText');
+    const spinner = document.getElementById('submitSpinner');
+
+    btn.disabled = true;
+    btnText.textContent = 'Отправка…';
+    spinner.classList.remove('hidden');
+
+    const rawName = (form.elements['Имя и Фамилия'].value || '').trim();
+    const firstName = rawName.split(/\s+/)[0] || '';
+    const isComing = form.elements['Присутствие'].value === 'С удовольствием приду';
+
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+    for (const pair of formData.entries()) {
+      params.append(pair[0], pair[1]);
+    }
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: params
+    })
+      .then(() => {
+        form.reset();
+        document.getElementById('companion-count-field').classList.add('hidden');
+        showModal('ok', firstName, isComing);
+      })
+      .catch(() => {
+        showModal('error');
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btnText.textContent = 'Отправить ответ';
+        spinner.classList.add('hidden');
+      });
+  });
+
+  // 5. МОДАЛЬНОЕ ОКНО ПОДТВЕРЖДЕНИЯ
+  function showModal(type, name, isComing) {
+    const modal = document.getElementById('rsvpModal');
+    const kicker = document.getElementById('modalKicker');
+    const title = document.getElementById('modalTitle');
+    const text = document.getElementById('modalText');
+
+    if (type === 'error') {
+      kicker.textContent = 'Ошибка';
+      title.textContent = 'Не удалось отправить';
+      text.textContent = 'Пожалуйста, проверьте подключение к интернету и попробуйте отправить ответ ещё раз.';
+    } else {
+      kicker.textContent = 'Ваша анкета учтена';
+      title.textContent = name ? `Спасибо, ${name}!` : 'Спасибо!';
+      text.textContent = isComing
+        ? 'Ваш ответ успешно сохранен в списке гостей. Будем счастливы видеть вас на нашем Никахе!'
+        : 'Спасибо, что предупредили нас. Нам будет вас не хватать в этот особенный день.';
+    }
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('rsvpModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+</script>
+</body>
+</html>
